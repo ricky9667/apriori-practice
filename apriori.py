@@ -1,6 +1,3 @@
-dataset1 = [{1, 3, 4}, {2, 3, 5}, {1, 2, 3, 5}, {2, 5}]
-
-
 def generate_base_set(dataset):
     base_set = set()
     for itemset in dataset:
@@ -49,7 +46,6 @@ def apriori(dataset, itemsets, min_support):
     filtered_itemsets = filter_by_min_support(itemsets, appear_times, min_support)
     if len(filtered_itemsets) <= 1:
         return []
-    # print("filtered_itemsets = " + str(filtered_itemsets))
 
     next_dataset = generate_next_itemsets(filtered_itemsets)
     frequent_itemsets = apriori(dataset, next_dataset, min_support)
