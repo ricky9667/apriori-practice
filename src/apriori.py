@@ -43,11 +43,13 @@ def generate_next_itemsets(filtered_itemsets):
 
 def apriori(dataset, itemsets, min_support):
     appear_times = calculate_item_appear_times(dataset, itemsets)
+
     filtered_itemsets = filter_by_min_support(itemsets, appear_times, min_support)
     if len(filtered_itemsets) <= 1:
         return []
 
     next_dataset = generate_next_itemsets(filtered_itemsets)
+
     frequent_itemsets = apriori(dataset, next_dataset, min_support)
     frequent_itemsets.insert(0, filtered_itemsets)
     return frequent_itemsets
