@@ -6,6 +6,6 @@ def generate_dataset_from_csv(file_path):
     with open(file_path, newline='') as csvfile:
         rows = csv.reader(csvfile)
         for row in rows:
-            subset = set(row)
-            dataset.append(subset)
+            items = row[0].split(',')
+            dataset.append(set(items))
     return dataset
