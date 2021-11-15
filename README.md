@@ -63,7 +63,7 @@ from src.converter import generate_dataset_from_csv
 
 def main():
     dataset = generate_dataset_from_csv('datasets/my_movies.csv')
-    frequent_itemsets = find_frequent_itemsets(dataset=dataset[0:300], min_support=2)
+    frequent_itemsets = find_frequent_itemsets(dataset=dataset, min_support=2)
     for frequent_itemset in frequent_itemsets:
         print(frequent_itemset)
 
