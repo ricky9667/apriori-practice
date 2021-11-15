@@ -10,10 +10,10 @@ This algorithm requires Python, first you have to install [here](https://www.pyt
 
 ```shell=
 # macOS
-brew install python
+brew install python3
 
 # Linux
-apt install python
+apt install python3
 ```
 
 > Note: macOS is required to install [Homebrew](https://brew.sh) before running the command above
